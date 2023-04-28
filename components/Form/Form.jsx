@@ -51,7 +51,7 @@ const Form = () => {
                 placeholder="Enter email*"
                 type="email"
                 className={styles.input}
-                name="email"
+                name="name"
               />
               {errors.email && (
                 <p
@@ -75,15 +75,6 @@ const Form = () => {
           </form>
         </article>
       </section>
-      <form
-        name="contact"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
-        hidden
-      >
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-      </form>
     </>
   );
 };
