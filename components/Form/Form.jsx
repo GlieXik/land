@@ -33,7 +33,9 @@ const Form = () => {
           <h3 className={styles.article__title}>Request Callback</h3>
           <form
             className={styles.form}
-            onSubmit={handleSubmit((data) => console.log(data))}
+            onSubmit={handleSubmit(async (data) => {
+              console.log(data);
+            })}
             name="contact"
             method="POST"
             data-netlify="true"
@@ -51,7 +53,7 @@ const Form = () => {
                 placeholder="Enter email*"
                 type="email"
                 className={styles.input}
-                name="name"
+                name="email"
               />
               {errors.email && (
                 <p

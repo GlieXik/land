@@ -1,10 +1,9 @@
 import Head from "next/head";
 
-import SimpleButton from "@/components/Buttons/SimpleButton";
 import WithIconBtn from "@/components/Buttons/WithIconBtn";
 import Logo from "@/components/Header/Logo";
 import Nav from "@/components/Header/Nav";
-import Image from "next/image";
+
 import Footer from "@/components/Footer/Footer";
 import Solution from "@/components/SolutionBlock/Solution";
 import Post from "@/components/PostBlock/Post";

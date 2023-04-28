@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./solution.module.css";
 import OutlineBtn from "../Buttons/OutlineBtn";
 
