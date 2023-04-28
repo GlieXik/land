@@ -38,6 +38,7 @@ const Form = () => {
             method="POST"
             data-netlify="true"
           >
+            <input type="hidden" name="form-name" value="contact" />
             <div className={styles.inputs}>
               <input
                 {...register("name")}
