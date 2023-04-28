@@ -1,13 +1,13 @@
 import Image from "next/image";
 import SimpleButton from "../Buttons/SimpleButton";
 import styles from "./form.module.css";
-// import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 const Form = () => {
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   formState: { errors },
-  // } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   return (
     <>
       <section className={styles.solution_wrapper} id="contact">
@@ -33,7 +33,7 @@ const Form = () => {
           <h3 className={styles.article__title}>Request Callback</h3>
           <form
             className={styles.form}
-            // onSubmit={handleSubmit((data) => console.log(data))}
+            onSubmit={handleSubmit((data) => console.log(data))}
             name="contact"
             method="POST"
             data-netlify="true"
@@ -75,6 +75,15 @@ const Form = () => {
           </form>
         </article>
       </section>
+      <form
+        name="contact"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        hidden
+      >
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+      </form>
     </>
   );
 };
