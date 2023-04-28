@@ -44,12 +44,14 @@ const Form = () => {
                 {...register("name")}
                 placeholder="Enter your name"
                 className={styles.input}
+                name="name"
               />
               <input
                 {...register("email", { required: true })}
                 placeholder="Enter email*"
                 type="email"
                 className={styles.input}
+                name="email"
               />
               {errors.email && (
                 <p
