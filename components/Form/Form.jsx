@@ -2,6 +2,12 @@ import Image from "next/image";
 import SimpleButton from "../Buttons/SimpleButton";
 import styles from "./form.module.css";
 import { useForm } from "react-hook-form";
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
 const Form = () => {
   const {
     register,
@@ -35,6 +41,15 @@ const Form = () => {
             className={styles.form}
             onSubmit={handleSubmit(async (data) => {
               console.log(data);
+              fetch("/", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: encode({ "form-name": "contact", ...data }),
+              })
+                .then(() => alert("Success!"))
+                .catch((error) => alert(error));
             })}
             name="contact"
             method="POST"
