@@ -5,7 +5,7 @@ import OutlineBtn from "../Buttons/OutlineBtn";
 const Post = () => {
   return (
     <>
-      <section className={styles.solution_wrapper} id="cases">
+      <section className={styles.solution_wrapper}>
         <div className={styles.image_container}>
           <Image
             className={styles.image}

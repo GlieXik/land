@@ -26,7 +26,7 @@ const BusinesCases = () => {
   };
   return (
     <>
-      <section className={styles.busines_cases}>
+      <section className={styles.busines_cases} id="cases">
         <div className={styles.titles}>
           <span className={styles.titles__sub}>This is what we do</span>
           <h2 className={styles.titles__title}>Business Cases</h2>
